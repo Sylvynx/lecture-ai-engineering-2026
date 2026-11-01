@@ -1,0 +1,12 @@
+{"question": "講座の用語集にある「宿題の3レベル」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "宿題の3レベル"}
+{"question": "講座の用語集にある「エージェントループ」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "エージェントループ"}
+{"question": "講座の用語集にある「AIエージェント」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "AIエージェント"}
+{"question": "講座の用語集にある「fork」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "fork"}
+{"question": "講座の用語集にある「fetchサーバー」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "fetchサーバー"}
+{"question": "講座の用語集にある「ツールの説明文」は、どのような意味で、どんな目的に使う概念ですか？", "kind": "paraphrase", "lookup_term": "ツールの説明文"}
+{"question": "用語集で「rank」と呼ばれる概念について、簡単に説明してください。", "kind": "alias", "lookup_term": "rank"}
+{"question": "用語集で「mcp-server-fetch」と呼ばれる概念について、簡単に説明してください。", "kind": "alias", "lookup_term": "mcp-server-fetch"}
+{"question": "この講座の用語集に「カルマンフィルタ」の説明はありますか？もしあれば説明してください。", "kind": "unlisted", "lookup_term": "カルマンフィルタ"}
+{"question": "この講座の用語集に「楕円曲線暗号」の説明はありますか？もしあれば説明してください。", "kind": "unlisted", "lookup_term": "楕円曲線暗号"}
+{"question": "この講座の用語集に「VHDL」の説明はありますか？もしあれば説明してください。", "kind": "unlisted", "lookup_term": "VHDL"}
+{"question": "この講座の用語集に「音響のウェーブレット変換」の説明はありますか？もしあれば説明してください。", "kind": "unlisted", "lookup_term": "音響のウェーブレット変換"}

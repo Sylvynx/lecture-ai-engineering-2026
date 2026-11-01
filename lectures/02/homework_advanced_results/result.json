@@ -1,0 +1,66 @@
+{
+  "task": "homework_advanced",
+  "level": "発展",
+  "executed_training_myself": true,
+  "method": "LoRA (32bit base model, unquantized)",
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lr": 0.0002,
+    "num_train_epochs": 3,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "max_seq_len": 512,
+    "max_new_tokens": 180
+  },
+  "source": {
+    "repo": "https://github.com/matsuolab/lecture-ai-engineering-2026.git",
+    "source_mode": "repo",
+    "glossary_terms": 58,
+    "sft_examples": 116,
+    "train_examples": 93,
+    "valid_examples": 23,
+    "test_questions": 12,
+    "glossary_sha256": "39de4f52e3de0b63cbd1500126ccdfa7863c83554ea1f9b3bf3f336c55a68e8c",
+    "sft_jsonl_sha256": "a78618c596656705b25bb0b105293fc3cef3f7069f7c978f4f25b9cd05e55cbb"
+  },
+  "training": {
+    "steps": 36,
+    "epochs_completed": 3.0,
+    "seconds": 93.75,
+    "final_loss": 1.5093445777893066,
+    "train_loss_from_trainer": 2.2185380624400244
+  },
+  "before": {
+    "label": "before",
+    "n": 12,
+    "listed_n": 8,
+    "unlisted_n": 4,
+    "listed_bigram_f1_mean": 0.0707,
+    "unlisted_abstention_rate": 0.25,
+    "seconds": 121.11
+  },
+  "after": {
+    "label": "after",
+    "n": 12,
+    "listed_n": 8,
+    "unlisted_n": 4,
+    "listed_bigram_f1_mean": 0.1064,
+    "unlisted_abstention_rate": 0.0,
+    "seconds": 62.86
+  },
+  "search": {
+    "label": "search",
+    "n": 12,
+    "listed_n": 8,
+    "unlisted_n": 4,
+    "listed_bigram_f1_mean": 1.0,
+    "unlisted_abstention_rate": 1.0,
+    "seconds": 0.0
+  },
+  "evaluation_note": "listed_bigram_f1_mean は正解率ではなく模範回答との文字2-gram類似度。unlisted_abstention_rate は保留表現の簡易検出。人手評価で事実関係を確認する。",
+  "human_review": "manual_review.csv"
+}
