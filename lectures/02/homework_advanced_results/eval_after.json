@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 12,
+    "listed_n": 8,
+    "unlisted_n": 4,
+    "listed_bigram_f1_mean": 0.1064,
+    "unlisted_abstention_rate": 0.0,
+    "seconds": 62.86
+  },
+  "rows": [
+    {
+      "question": "講座の用語集にある「宿題の3レベル」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "A1/A2：基礎用語の整理・確認。A3：本講座の進め方・進捗管理・評価。",
+      "reference_answer": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "bigram_f1": 0.0312,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「エージェントループ」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "エージェントが学習するモデルを、エージェントの行動と結果をモデルに返すことで、モデルがモデルを学習する仕組み。モデルがモデルを学習するまでループし、モデルがモデルを学習するまでループする。",
+      "reference_answer": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "bigram_f1": 0.1771,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「AIエージェント」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "エージェントは、外部のツールや環境を介して、複数のタスクを順番にこなすプログラム。本講座では、LLMをエージェントとして使うことで、ツールを呼ぶ、検索する、ファイル操作する、といった作業を自動化して、複数のタスクを順番にこなす。本講座では、エージェントを複数回呼び出して、各回の結果をまとめて報告する。",
+      "reference_answer": "LLMが自分で判断してツールを呼び出し、その結果を見てさらに次の行動を決める、というループで目的を達成するシステム。基本構造は「モデル＋ループ＋ツール」。",
+      "bigram_f1": 0.177,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「fork」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "自分のコードを別のユーザーのforkしたコードに切り替える作業。本講座では「fork」とは「自分のコードを別のユーザーのforkしたコードに切り替える」という作業を指す。forkしたコードは、forkしたユーザーのforkしたforkのコードに書き換えられる。forkしたforkは、forkしたforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのforkのfork",
+      "reference_answer": "他人のrepoを自分のアカウントに丸ごとコピーすること。本講座では講座repoをforkし、自分のfork上で作業・提出する。",
+      "bigram_f1": 0.0779,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「fetchサーバー」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "LLMが外部のAPIやツールを呼び出すためのツール。本講座ではGitHubのAPIやClaudeのAPI、GitHub CopilotのAPI、GitHub Copilot CodeのAPI、GitHub Copilot ChatのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Copilot SearchのAPI、GitHub Cop",
+      "reference_answer": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "bigram_f1": 0.0356,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「ツールの説明文」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "ツールを何に使われるか、どんな用途があるか、どんな制限や挙動があるか、という説明。本講座ではツールを何に使ってもよい（例：Pythonのpip）と、ツールを何に使ってもよい（例：GitHub Copilot）と、ツールを何に使ってもよい（例：Claude Code）の3つの考え方を区別する。",
+      "reference_answer": "ツールの用途や引数の意味をモデルに伝える文章。Pydantic AIでは関数のdocstringと型ヒントから自動で作られる。モデルはこれを読んでツールを使うか、どの引数で呼ぶかを決めるので、書き方次第で挙動が大きく変わる。",
+      "bigram_f1": 0.1107,
+      "abstained": null
+    },
+    {
+      "question": "用語集で「rank」と呼ばれる概念について、簡単に説明してください。",
+      "kind": "alias",
+      "in_glossary": true,
+      "raw": "モデルの出力をスコアで評価する指標。同じ入力でも出力が異なるほど、このスコアが上がるほどモデルが良くなる。",
+      "reference_answer": "LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。",
+      "bigram_f1": 0.1228,
+      "abstained": null
+    },
+    {
+      "question": "用語集で「mcp-server-fetch」と呼ばれる概念について、簡単に説明してください。",
+      "kind": "alias",
+      "in_glossary": true,
+      "raw": "MCPサーバーとして公開するツールやアプリを、MCPクライアントから呼び出すための標準化されたAPI。公開するツールは、公開するアプリのMCPサーバーとして公開し、公開するクライアントがMCPクライアントとして公開するアプリのMCPサーバーとしてクライアントから呼び出す。",
+      "reference_answer": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "bigram_f1": 0.1185,
+      "abstained": null
+    },
+    {
+      "question": "この講座の用語集に「カルマンフィルタ」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "観測値（測定値）と推測値（モデルの出力）の差を最小限に抑え、推測値を更新するアルゴリズム。観測値の誤差をモデルの出力に直接掛ける（重み）と、モデルの出力の誤差を観測値の誤差に掛ける（重み）のどちらかを選ぶ。重みが小さいほど推測値が観測値に近くなる。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": false
+    },
+    {
+      "question": "この講座の用語集に「楕円曲線暗号」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "2026年10月の講座では、第1回演習の宿題として「楕円曲線暗号（ECC）について簡単に説明してください」という質問が出ます。答えやすい説明の例：「公钥暗号の強度を上げるために、公钥の長さを増やす。同じ鍵で同じ数の通信をできる。1024ビットの鍵で1000回の通信をできる。128ビットの鍵で100回の通信で十分。128ビット以上は1回の通信で1000回以上できる。128ビット以上は公钥暗号の標準。128ビット以上は公钥暗号の標準。128ビット以上は公钥暗号の標準。」",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": false
+    },
+    {
+      "question": "この講座の用語集に「VHDL」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "VHDLはVerilogの2.0の拡張。演習の第1回でVHDLの言語を学ぶ。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": false
+    },
+    {
+      "question": "この講座の用語集に「音響のウェーブレット変換」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "周波数と時間の両方を同時に捉える手法。高周波の情報を低周波で分けることで、時間軸の長さを縮め、重みを減らす。本講座では第1回演習で使う。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": false
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "label": "search",
+    "n": 12,
+    "listed_n": 8,
+    "unlisted_n": 4,
+    "listed_bigram_f1_mean": 1.0,
+    "unlisted_abstention_rate": 1.0,
+    "seconds": 0.0
+  },
+  "rows": [
+    {
+      "question": "講座の用語集にある「宿題の3レベル」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "reference_answer": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「エージェントループ」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "reference_answer": "モデルに入力を渡す→モデルがツール呼び出しを返したら実行する→結果をモデルに戻す、をモデルが最終回答を返すまで繰り返す処理。1つの質問でLLMを複数回呼ぶため、時間・料金・レート制限への影響が大きい。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「AIエージェント」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "LLMが自分で判断してツールを呼び出し、その結果を見てさらに次の行動を決める、というループで目的を達成するシステム。基本構造は「モデル＋ループ＋ツール」。",
+      "reference_answer": "LLMが自分で判断してツールを呼び出し、その結果を見てさらに次の行動を決める、というループで目的を達成するシステム。基本構造は「モデル＋ループ＋ツール」。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「fork」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "他人のrepoを自分のアカウントに丸ごとコピーすること。本講座では講座repoをforkし、自分のfork上で作業・提出する。",
+      "reference_answer": "他人のrepoを自分のアカウントに丸ごとコピーすること。本講座では講座repoをforkし、自分のfork上で作業・提出する。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「fetchサーバー」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "reference_answer": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "講座の用語集にある「ツールの説明文」は、どのような意味で、どんな目的に使う概念ですか？",
+      "kind": "paraphrase",
+      "in_glossary": true,
+      "raw": "ツールの用途や引数の意味をモデルに伝える文章。Pydantic AIでは関数のdocstringと型ヒントから自動で作られる。モデルはこれを読んでツールを使うか、どの引数で呼ぶかを決めるので、書き方次第で挙動が大きく変わる。",
+      "reference_answer": "ツールの用途や引数の意味をモデルに伝える文章。Pydantic AIでは関数のdocstringと型ヒントから自動で作られる。モデルはこれを読んでツールを使うか、どの引数で呼ぶかを決めるので、書き方次第で挙動が大きく変わる。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "用語集で「rank」と呼ばれる概念について、簡単に説明してください。",
+      "kind": "alias",
+      "in_glossary": true,
+      "raw": "LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。",
+      "reference_answer": "LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "用語集で「mcp-server-fetch」と呼ばれる概念について、簡単に説明してください。",
+      "kind": "alias",
+      "in_glossary": true,
+      "raw": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "reference_answer": "指定したURLのページを取得し、本文をMarkdownにして返す既製のMCPサーバー（Python製、uvx mcp-server-fetch で起動）。本講座では「設定ファイルに書くだけで外部ツールが増える」例として使う。モデルが選んだURLに実際にアクセスするので、どこへ何を送るかは利用者が把握しておく。",
+      "bigram_f1": 1.0,
+      "abstained": null
+    },
+    {
+      "question": "この講座の用語集に「カルマンフィルタ」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "この講座の用語集には記載がありません。確認が必要です。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": true
+    },
+    {
+      "question": "この講座の用語集に「楕円曲線暗号」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "この講座の用語集には記載がありません。確認が必要です。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": true
+    },
+    {
+      "question": "この講座の用語集に「VHDL」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "この講座の用語集には記載がありません。確認が必要です。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": true
+    },
+    {
+      "question": "この講座の用語集に「音響のウェーブレット変換」の説明はありますか？もしあれば説明してください。",
+      "kind": "unlisted",
+      "in_glossary": false,
+      "raw": "この講座の用語集には記載がありません。確認が必要です。",
+      "reference_answer": "用語集に記載がありません。",
+      "bigram_f1": null,
+      "abstained": true
+    }
+  ]
+}
