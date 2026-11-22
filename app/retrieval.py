@@ -137,6 +137,52 @@ def search(query: str) -> list[dict]:
         """, (sqlite_vec.serialize_float32(vector), RAG_TOP_K))
         return [dict(row) for row in rows]
 
+# L05の宿題で追加
+def search_with_neighbors(query: str) -> list[dict]:
+    """ベクトル検索の結果に、同じ資料の前後1ページを追加する。"""
+
+    # 1. 通常のベクトル検索
+    hits = search(query)
+
+    # 2. 資料IDとページ番号からページを探せるようにする
+    pages_by_position = {
+        (page["document_id"], page["page"]): page
+        for page in load_pages()
+    }
+
+    # 3. 元の検索結果の形式を変更せず保持する
+    results = [dict(hit) for hit in hits]
+
+    seen = {hit["page_id"] for hit in hits}
+
+    # 4. 各検索結果の前後1ページを追加
+    for hit in hits:
+        document_id = hit.get("document_id")
+
+    # 資料IDがない場合は、元の検索結果だけを返す
+        if document_id is None:
+            continue
+
+        for page_number in (hit["page"] - 1, hit["page"] + 1):
+            neighbor = pages_by_position.get(
+                (document_id, page_number)
+            )
+
+            # ページが存在しない場合や重複する場合は追加しない
+            if neighbor is None or neighbor["page_id"] in seen:
+                continue
+
+            results.append({
+                **neighbor,
+                "distance": None,
+                "retrieval_type": "neighbor",
+                "neighbor_of": hit["page_id"],
+            })
+
+            seen.add(neighbor["page_id"])
+
+    return results
+# L05の宿題で追加ここまで
 
 def search_graph(query: str) -> dict:
     """ベクトル検索を入口に、前後ページと共通用語で候補を広げる。"""
